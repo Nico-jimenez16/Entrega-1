@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script defer src="./app.js" ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="w-full bg-[url('./image/image-2.jpg')] h-1/2 p-12 text-white">
+            <h2 class="text-xl">{{ presentacion }}</h2>
+            <h2 class="text-xl mb-4">{{ entrega }}</h2>
+            <h1 class="flex justify-center text-4xl">{{ titulo }}</h1>
+            <div class="flex bg-[url('./image/image.png')] w-full justify-center border-2 py-6 rounded-xl mt-4 mb-4 text-3xl">
+                Resultado: {{ suma }}
+            </div>
+            <div class="flex w-full justify-center text-xl">
+                <button @click="suma--" class="px-4 py-2 bg-inherit hover:bg-black hover:text-white border rounded-md">Restar</button>
+                <button @click="suma++" class="px-4 py-2 bg-inherit hover:bg-black hover:text-white border rounded-md ml-2">Sumar</button>
+            </div>
+            <div class="flex w-full justify-start text-xl">
+                <button @click="suma = 0" class="px-4 py-2 bg-inherit hover:bg-black hover:text-white border rounded-md mr-2">Reset</button>
+            </div>
+        </div>       
+    </div>
+</body>
+</html>
